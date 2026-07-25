@@ -134,6 +134,71 @@
     display: block;
     margin: 30px auto;
   }
+  /* HERO TWO-COLUMN LAYOUT */
+.hero-container {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px;
+  margin-top: 40px;
+}
+
+/* LEFT COLUMN */
+.hero-left {
+  flex: 0 0 300px;
+}
+
+/* BOOK COVER IMAGE */
+.hero-book {
+  width: 100%;
+  display: block;
+}
+
+/* RIGHT COLUMN */
+.hero-right {
+  flex: 1;
+  max-width: 600px;
+}
+
+/* SUBHEAD + HOOK */
+.subheadline {
+  font-weight: 300;
+  margin-top: 10px;
+}
+
+.hook {
+  font-size: 1.2em;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* CTA BUTTON */
+.cta-button {
+  background: #0077ff;
+  color: white;
+  padding: 14px 26px;
+  border-radius: 6px;
+  font-size: 1.2em;
+  text-decoration: none;
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+/* CTA SECONDARY LINKS */
+.cta-secondary a {
+  color: #666;
+  text-decoration: none;
+  margin-right: 12px;
+  font-size: 0.9em;
+}
+
+/* TESTIMONIALS */
+.testimonials blockquote {
+  font-style: italic;
+  margin: 20px 0;
+  color: #333;
+}
+
 </style>
 </head>
 
@@ -152,8 +217,6 @@
 
   <!-- RIGHT COLUMN: TEXT + CTA + REVIEWS -->
   <div class="hero-right">
-
-    <h1>The End of Time</h1>
 
     <p class="subheadline">
       A quantum‑theological exploration of creation, consciousness, and the meaning of existence.
