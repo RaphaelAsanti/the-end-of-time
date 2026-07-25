@@ -15,6 +15,7 @@ You may **copy**, **share**, and **redistribute** the ebook in any medium or for
 You can download the ebook directly from this repository:
 
 **[Download The End of Time (PDF)](TheEndOfTime.pdf)**
+**[Download The End of Time (EPUB)](TheEndOfTime.epub)**
 
 ## Landing Page
 The GitHub Pages landing page is available at:
