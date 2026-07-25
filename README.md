@@ -19,7 +19,7 @@ You can download the ebook directly from this repository:
 ## Landing Page
 The GitHub Pages landing page is available at:
 
-**https://<raphaelasanti.github.io/the-end-of-time/**
+**https://raphaelasanti.github.io/the-end-of-time/**
 
 It provides a public, indexable page linking to the ebook and its metadata.
 
