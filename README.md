@@ -4,7 +4,8 @@ This repository hosts the official distribution of **The End of Time**, a philos
 
 ## Contents
 - `index.html` — Public landing page for GitHub Pages  
-- `TheEndOfTime.pdf` — Full ebook (downloadable)  
+- `TheEndOfTime.pdf` — Full ebook (downloadable PDF)
+- `TheEndOfTime.epub` — Full ebook (downloadable EPUB)  
 - `LICENSE` — CC‑BY‑ND 4.0 license text  
 
 ## License
