@@ -79,12 +79,6 @@
     color: #555;
     margin-bottom: 2em;
   }
-  .description {
-    font-size: 1.1em;
-    color: #333;
-    margin-bottom: 2.5em;
-    line-height: 1.7;
-  }
   .downloads {
     text-align: center;
     margin-bottom: 2.5em;
@@ -113,92 +107,100 @@
     margin: 20px 0;
   }
   .cta {
-  text-align: center;
-  margin-top: 20px;
-}
+    text-align: center;
+    margin-top: 20px;
+  }
+  .cta-secondary {
+    margin-top: 8px;
+    font-size: 0.9em;
+    color: #666;
+  }
+  .cta-secondary a {
+    color: #666;
+    text-decoration: none;
+    margin: 0 6px;
+  }
 
-.cta-secondary {
-  margin-top: 8px;
-  font-size: 0.9em;
-  color: #666;
-}
+  /* HERO TWO-COLUMN LAYOUT — now only holds cover + short hook + CTA */
+  .hero-container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+    flex-wrap: wrap; /* stacks cleanly on narrow/mobile screens */
+  }
 
-.cta-secondary a {
-  color: #666;
-  text-decoration: none;
-  margin: 0 6px;
-}
+  .hero-left {
+    flex: 0 0 300px;
+  }
+
+  .hero-book {
+    width: 100%;
+    display: block;
+    border-radius: 4px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+  }
+
+  .hero-right {
+    flex: 1;
+    min-width: 280px;
+    max-width: 600px;
+  }
+
+  .subheadline {
+    font-weight: 300;
+    margin-top: 10px;
+  }
+
+  .hook-list {
+    font-size: 1.05em;
+    color: #444;
+    line-height: 1.6;
+    padding-left: 1.2em;
+    margin: 20px 0;
+  }
+
+  .cta-button {
+    background: #0077ff;
+    color: white;
+    padding: 14px 26px;
+    border-radius: 6px;
+    font-size: 1.2em;
+    text-decoration: none;
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+
+  /* FULL-WIDTH SECTIONS BELOW HERO */
+  .full-section {
+    max-width: 700px;
+    margin: 50px auto;
+    line-height: 1.7;
+    color: #333;
+  }
+  .full-section h2 {
+    font-weight: 300;
+    text-align: center;
+    margin-bottom: 0.6em;
+  }
+
+  .lookinside {
+    max-width: 700px;
+    margin: 50px auto;
+  }
 
   img.bookcover {
     max-width: 300px;
     display: block;
     margin: 30px auto;
   }
-  /* HERO TWO-COLUMN LAYOUT */
-.hero-container {
-  display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 40px;
-  margin-top: 40px;
-}
-
-/* LEFT COLUMN */
-.hero-left {
-  flex: 0 0 300px;
-}
-
-/* BOOK COVER IMAGE */
-.hero-book {
-  width: 100%;
-  display: block;
-}
-
-/* RIGHT COLUMN */
-.hero-right {
-  flex: 1;
-  max-width: 600px;
-}
-
-/* SUBHEAD + HOOK */
-.subheadline {
-  font-weight: 300;
-  margin-top: 10px;
-}
-
-.hook {
-  font-size: 1.2em;
-  margin: 20px 0;
-  color: #444;
-}
-
-/* CTA BUTTON */
-.cta-button {
-  background: #0077ff;
-  color: white;
-  padding: 14px 26px;
-  border-radius: 6px;
-  font-size: 1.2em;
-  text-decoration: none;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-
-/* CTA SECONDARY LINKS */
-.cta-secondary a {
-  color: #666;
-  text-decoration: none;
-  margin-right: 12px;
-  font-size: 0.9em;
-}
-
-/* TESTIMONIALS */
-.testimonials blockquote {
+  .challenge-line {
   font-style: italic;
-  margin: 20px 0;
-  color: #333;
+  font-weight: 600;
+  color: #0077ff;
+  margin: 15px 0 25px;
 }
-
 </style>
 </head>
 
@@ -208,83 +210,53 @@
   <h1>The End of Time</h1>
   <p class="subtitle">by Raphael Asanti</p>
 
-<div class="hero-container">
+  <!-- HERO: cover + short hook + CTA only -->
+  <div class="hero-container">
 
-  <!-- LEFT COLUMN: BOOK COVER -->
-  <div class="hero-left">
-    <img src="3dbookcover.jpg" alt="The End of Time — 3D Book Cover" class="hero-book">
-  </div>
-
-  <!-- RIGHT COLUMN: TEXT + CTA + REVIEWS -->
-  <div class="hero-right">
-
-    <p class="subheadline">
-     This book explains:
-    </p>
-
-    <p class="hook">
-      <ul>
-
-
-        
-      </ul>
-    <li>The subatomic physics of how the universe was created.</li>
-    <li>Why day zero of creation was ignored by theologians even though it’s written in Genesis and what happened on day zero.</li>
-    <li>How and why this universe became a universe of duality and what that means to  you.</li>
-    <li>Why the earth’s axis tilts at a 23.5 degree angle and the north pole circles the draco constellation.</li>
-    <li>Who you are, why you’re here and the meaning of life.</li>
-    <li>Why you have a body made of flesh and bones instead of a body made of solid light – and how you might obtain a body made of solid light.</li>
-    <li>The solution to peace in the Middle East.</li>
-    <li>How to calculate the area of a circle with 100%  accuracy and without using Pi – and why that’s important.</li>
-    <li>What “One Nation Under God” actually means and why America does not fit that description.</li>
-    <li>What Jesus changed in the rules and why it mattered.</li>
-    <li>How the Old Testament, the New Testament and the Quran all fit together with no disparities. </li>   
-  </p>
-
-    <!-- CTA -->
-    <div class="cta">
-      <a class="cta-button" href="TheEndofTime.pdf">Get the Free eBook</a>
-
-      <div class="cta-secondary">
-        <a href="TheEndofTime.pdf">PDF</a>
-        <a href="TheEndofTime.epub">EPUB</a>
-        <a href="https://www.scribd.com/document/1065728217/TheEndofTime">Scribd</a>
-        <a href="https://phirun4.gumroad.com/l/zsmzjh">Gumroad</a>
-      </div>
+    <div class="hero-left">
+      <img src="3dbookcover.jpg" alt="The End of Time — 3D Book Cover" class="hero-book">
     </div>
-<section id="about-author">
-  <h2>About the Author</h2>
-  <p>
-    My name is Raphael E. Asanti and I am a Sovereign Servant of the Sovereign
-    Lord God Almighty - I know about some things.  I've spent manmy years living 
-    as a homeless beggar on the streets and have not been able to find anyone I could 
-    discuss these ideas with, so I decided to write some of them down and publish them
-    in eBook form.
-  </p>
-  <p>
-I dompleted this work with nothing but the use of a free library computer and I'm offering it 
-    absolutely free with the hopes that it will help some people.
-  </p>
 
-</section>
+    <div class="hero-right">
 
+      <p class="subheadline">This book explains:</p>
+
+      <ul class="hook-list">
+        <li>The subatomic physics of how the universe was created.</li>
+        <li>Why day zero of creation was ignored by theologians even though it’s written in Genesis and what happened on day zero.</li>
+        <li>How and why this universe became a universe of duality and what that means to you.</li>
+        <li>Why the earth’s axis tilts at a 23.5 degree angle and the north pole circles the draco constellation.</li>
+        <li>Who you are, why you’re here and the meaning of life.</li>
+        <li>Why you have a body made of flesh and bones instead of a body made of solid light – and how you might obtain a body made of solid light.</li>
+        <li>The solution to peace in the Middle East.</li>
+        <li>How to calculate the area of a circle with 100% accuracy and without using Pi – and why that’s important.</li>
+        <li>What “One Nation Under God” actually means and why America does not fit that description.</li>
+        <li>What Jesus changed in the rules and why it mattered.</li>
+        <li>How the Old Testament, the New Testament and the Quran all fit together with no disparities.</li>
+      </ul>
+<p class="challenge-line">
+  Don't believe it's possible? Read the book — it's all explained.
+</p>
+      <div class="cta">
+        <a class="cta-button" href="TheEndofTime.pdf">Get the Free eBook</a>
+        <div class="cta-secondary">
+          <a href="TheEndofTime.pdf">PDF</a>
+          <a href="TheEndofTime.epub">EPUB</a>
+          <a href="https://www.scribd.com/document/1065728217/TheEndofTime">Scribd</a>
+        </div>
+      </div>
+
+    </div>
   </div>
-
-</div>
-
 
   <!-- LOOK INSIDE SECTION 1 -->
   <div class="lookinside">
     <h2 style="font-weight:300; text-align:center;">Look Inside</h2>
-
     <p><strong>Excerpt from the opening chapter:</strong></p>
-
     <blockquote>
 The material universe is not a giant, accidental empty room that goes on forever. It is a closed box.
 Think of it like a high-tech, highly monitored incubator built for one specific purpose: growing human souls. The Creator did not design an open-ended playground. Instead, He built a temporary, completely controlled "clean room" to isolate the experiment and test human free will with absolute precision.
-
     </blockquote>
-
     <p>
       This preview offers a glimpse into the book’s core theme: the intersection of theology, cosmology,
       and the structure of reality.
@@ -294,24 +266,55 @@ Think of it like a high-tech, highly monitored incubator built for one specific 
   <!-- LOOK INSIDE SECTION 2 -->
   <div class="lookinside">
     <h2 style="font-weight:300; text-align:center;">Second Excerpt</h2>
-
     <p><strong>From later in the book:</strong></p>
-
     <blockquote>
 You are not a body. You are a soul. Your soul is the real, permanent you. It is a living recording device. Every single word you have ever spoken and every deed you have ever done is saved on your soul. Your soul is your true identity as an individual.
 Your physical body is just an interface. It is like an avatar or a spacesuit. Whether your body is made of light, flesh, or cardboard and Styrofoam, it does not matter. The body is just the machine you use to touch, experience, and interact with this physical world.
-
     </blockquote>
-
   </div>
 
+  <!-- ABOUT THE AUTHOR — full width, own section -->
+  <section id="about-author" class="full-section">
+    <h2>About the Author</h2>
+    <p>
+      My name is Raphael E. Asanti, and I am a Sovereign Servant of the Sovereign
+      Lord God Almighty — I know about some things. I've spent many years living
+      as a homeless beggar on the streets and haven't been able to find anyone I
+      could discuss these ideas with, so I decided to write some of them down and
+      publish them in eBook form.
+    </p>
+    <p>
+      I completed this work with nothing but the use of a free library computer,
+      and I'm offering it absolutely free with the hopes that it will help some people.
+    </p>
+  </section>
 
-  <!-- DOWNLOAD SECTION -->
+  <!-- DONATION / SUPPORT — full width, own section, right after the bio -->
+  <section class="full-section">
+    <h2>If This Was Worth Something to You</h2>
+    <p>
+      This book is free. It always will be. You've already got the
+      PDF and EPUB above &mdash; nothing here is locked behind a paywall.
+    </p>
+    <p>
+      If it gave you something worth having, you can grab it again
+      through Gumroad and leave whatever amount feels right &mdash;
+      including $0. It's the same book, same file, just a place to
+      say thanks if you want to.
+    </p>
+    <p><strong>Donations are appreciated, never required.</strong></p>
+    <div class="cta">
+      <a class="cta-button" href="https://phirun4.gumroad.com/l/zsmzjh">
+        Get it on Gumroad — name your price
+      </a>
+    </div>
+  </section>
+
+  <!-- FINAL DOWNLOAD SECTION -->
   <div class="downloads">
     <a href="https://cdn.jsdelivr.net/gh/RaphaelAsanti/the-end-of-time/TheEndofTime.pdf">Download PDF</a>
     <a href="https://cdn.jsdelivr.net/gh/RaphaelAsanti/the-end-of-time/TheEndofTime.epub">Download EPUB</a>
     <a href="https://www.scribd.com/document/1065728217/TheEndofTime" target="_blank">Read on Scribd</a>
-    <a href="https://phirun4.gumroad.com/l/zsmzjh" target="_blank">Download via Gumroad</a>
   </div>
 
   <div class="footer">
