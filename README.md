@@ -28,3 +28,8 @@ It provides a public, indexable page linking to the ebook and its metadata.
 
 ## About
 This repository exists to provide a permanent, openly accessible, redistribution‑friendly version of *The End of Time* while preserving the author's copyright and prohibiting unauthorized edits.
+
+---
+
+Additional background context is available [here](https://raphaelasanti.github.io/eye-of-the-needle/).
+
