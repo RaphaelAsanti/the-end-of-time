@@ -31,5 +31,4 @@ This repository exists to provide a permanent, openly accessible, redistribution
 
 ---
 
-Additional background context is available [here](https://raphaelasanti.github.io/eye-of-the-needle/).
-
+Additional background context is available [here](https://raphaelasanti.github.io/the-eye-of-the-needle/).
