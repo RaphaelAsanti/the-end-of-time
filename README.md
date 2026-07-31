@@ -31,4 +31,9 @@ This repository exists to provide a permanent, openly accessible, redistribution
 
 ---
 
-Additional background context is available [here](https://raphaelasanti.github.io/the-eye-of-the-needle/).
+## Author
+
+Raphael E. Asanti  
+July 2026
+
+Main index: https://raphaelasanti.github.io/
