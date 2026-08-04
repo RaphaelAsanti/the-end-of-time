@@ -11,7 +11,7 @@ https://raphaelasanti.github.io/the-end-of-time/
 https://github.com/RaphaelAsanti/the-end-of-time/TheEndOfTime.epub
 
 ### PDF
-https://raphaelasanti.github.io/the-end-of-time/TheEndOfTime.pdf
+https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf
 
 ### License
 https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
