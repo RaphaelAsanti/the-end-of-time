@@ -8,7 +8,7 @@ index.html — Primary page (HTML)
 https://raphaelasanti.github.io/the-end-of-time/
 
 ### EPUB
-https://github.com/RaphaelAsanti/the-end-of-time/TheEndOfTime.epub
+https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub
 
 ### PDF
 https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf
