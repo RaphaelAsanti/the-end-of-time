@@ -1,39 +1,25 @@
-# The End of Time
+# The End of Time — Free Ebook
 
-This repository hosts the official distribution of **The End of Time**, a philosophical ebook released under the **Creative Commons Attribution–NoDerivatives 4.0 (CC‑BY‑ND 4.0)** license.
+A concise structural overview of the full text of *The End of Time*.  
+This repository provides the complete free edition of the ebook, including the HTML version, EPUB file, and supporting materials.
 
-## Contents
-- `index.html` — Public landing page for GitHub Pages  
-- `TheEndOfTime.pdf` — Full ebook (downloadable PDF)
-- `TheEndOfTime.epub` — Full ebook (downloadable EPUB)  
-- `LICENSE` — CC‑BY‑ND 4.0 license text  
+### Files
+index.html — Primary page (HTML)  
+https://raphaelasanti.github.io/the-end-of-time/
 
-## License
-This work is licensed under **CC‑BY‑ND 4.0**.  
-You may **copy**, **share**, and **redistribute** the ebook in any medium or format, **as long as attribution is preserved** and **no modifications** are made to the text.
+### EPUB
+https://github.com/RaphaelAsanti/the-end-of-time/raw/main/TheEndOfTime.epub
 
-## Download
-You can download the ebook directly from this repository:
+### PDF
+https://raphaelasanti.github.io/the-end-of-time/TheEndOfTime.pdf
 
-- **[Download The End of Time (PDF)](https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf)**
+### License
+https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
 
-- **[Download The End of Time (EPUB)](https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub)**
-
-## Landing Page
-The GitHub Pages landing page is available at:
-
-**https://raphaelasanti.github.io/the-end-of-time/**
-
-It provides a public, indexable page linking to the ebook and its metadata.
-
-## About
-This repository exists to provide a permanent, openly accessible, redistribution‑friendly version of *The End of Time* while preserving the author's copyright and prohibiting unauthorized edits.
-
----
-
-## Author
-
+### Author
 Raphael E. Asanti  
 July 2026
 
-Main index: https://raphaelasanti.github.io/
+### Related Pages
+Main Index  
+https://raphaelasanti.github.io/
