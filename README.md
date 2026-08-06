@@ -22,11 +22,9 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 ## Downloads
 - HTML (primary web edition): https://raphaelasanti.github.io/the-end-of-time/  
 - EPUB: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub  
-  - Size: (add size) — SHA256: (add checksum)
+  - Size: (3.6 MB)
 - PDF: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf  
-  - Size: (add size) — SHA256: (add checksum)
-
-Why checksums? Adding SHA256 (or other checksums) helps readers verify files after download.
+  - Size: (1.4 MB)
 
 ---
 
