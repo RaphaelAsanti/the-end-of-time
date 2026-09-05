@@ -21,11 +21,11 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 ## Downloads
 - HTML (primary web edition): https://raphaelasanti.github.io/the-end-of-time/  
 - EPUB: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub  
-  - Size: (3.6 MB)
+  - Size: (3.4 MB)
 - PDF: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf  
   - Size: (5.8 MB)
 
-- [eBook thesis & outline (PDF)](https://github.com/RaphaelAsanti/the-end-of-time/blob/main/ebook-thesis-and-outline.pdf) — 4 pages, concise thesis statement and chapter outline (created 2026‑07‑30).
+- [eBook thesis & outline (PDF)](https://github.com/RaphaelAsanti/the-end-of-time/blob/main/ebook-thesis-and-outline.pdf) — 4 pages, concise thesis statement and chapter outline (created July 2026).
 - [Download eBook thesis and outline PDF (raw)](https://raw.githubusercontent.com/RaphaelAsanti/the-end-of-time/main/ebook-thesis-and-outline.pdf)
 
 ---
@@ -50,17 +50,12 @@ This work is sustained entirely by voluntary contributions.
 - Cash App: https://cash.app/$phirunltd  
 - Gumroad (optional donation when downloading): https://phirun4.gumroad.com/l/zsmzjh
 
-Thank you for supporting the project.
+Thank you for supporting the Author.
 
 ---
 
 ## Contributing & Issues
 - Issues: Please open an issue on GitHub for typos, packaging problems (broken EPUB/PDF), accessibility bugs, or site problems: https://github.com/RaphaelAsanti/the-end-of-time/issues
-- Pull Requests: Because the text is released under CC‑BY‑ND, full derivative edits or new versions are restricted. Acceptable PRs may include:
-  - Fixes to metadata (EPUB metadata, file names)
-  - Build/packaging improvements (EPUB / PDF generation scripts)
-  - Non‑substantive formatting fixes (typos) — but please check licensing constraints and open an issue first if unsure.
-- For substantive editorial changes, translations, or adaptations, please contact the author for permission.
 
 ---
 
