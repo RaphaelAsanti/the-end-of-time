@@ -48,10 +48,7 @@ Raphael E. Asanti, The End of Time — structural overview and eBook (HTML/EPUB/
 ---
 
 ## License
-This repository is licensed under CC‑BY‑ND 4.0. See the full license: https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
-
-Note: CC‑BY‑ND allows redistribution with attribution but does not allow derivative works. If you want to propose edits or translations, please contact the author (see contact below) to arrange permission or discuss contribution options.
-
+Copyright © 2026 Raphael Asanti - All rights reserved. https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
 ---
 
 ## Donate
