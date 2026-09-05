@@ -41,6 +41,7 @@ If you prefer not to donate, you may download directly from the links above.
 
 ## License
 Copyright © 2026 Raphael Asanti - All rights reserved. https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
+
 ---
 
 ## Donate
