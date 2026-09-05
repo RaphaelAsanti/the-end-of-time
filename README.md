@@ -10,7 +10,6 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 ## Table of contents
 - [Downloads](#downloads)
 - [How to read / use](#how-to-read--use)
-- [Citation](#citation)
 - [License](#license)
 - [Donate](#donate)
 - [Contributing & Issues](#contributing--issues)
@@ -37,13 +36,6 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 - PDF: open with any PDF reader.
 
 If you prefer not to donate, you may download directly from the links above.
-
----
-
-## Citation
-If you cite or redistribute this work, please attribute as follows:
-
-Raphael E. Asanti, The End of Time — structural overview and eBook (HTML/EPUB/PDF), July 2026. Available under CC‑BY‑ND 4.0: https://github.com/RaphaelAsanti/the-end-of-time/blob/main/LICENSE
 
 ---
 
