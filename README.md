@@ -23,9 +23,9 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 - EPUB: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub  
   - Size: (3.6 MB)
 - PDF: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf  
-  - Size: (1.4 MB)
+  - Size: (5.8 MB)
 
-- [eBook thesis & outline (PDF)](https://github.com/RaphaelAsanti/the-end-of-time/blob/main/ebook-thesis-and-outline.pdf) — 4 pages, concise thesis statement and chapter outline (created 2026‑07‑30). Licensed CC‑BY‑ND 4.0.
+- [eBook thesis & outline (PDF)](https://github.com/RaphaelAsanti/the-end-of-time/blob/main/ebook-thesis-and-outline.pdf) — 4 pages, concise thesis statement and chapter outline (created 2026‑07‑30).
 - [Download eBook thesis and outline PDF (raw)](https://raw.githubusercontent.com/RaphaelAsanti/the-end-of-time/main/ebook-thesis-and-outline.pdf)
 
 ---
