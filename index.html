@@ -293,6 +293,12 @@
 <div class="cta">
   <a href="#downloads">Get the Free eBook</a>
 </div>
+  <!-- TRIGGER BUTTON (place after the 3D book cover image) -->
+<div style="text-align: center; margin: 20px 0;">
+  <button class="preview-button" onclick="openCarousel()">
+    Preview Pages Inside
+  </button>
+</div>
 <div style="
     float: right;
     width: 280px;
@@ -303,6 +309,7 @@
     font-size: 0.9em;
     line-height: 1.4;
 ">
+  
     <strong>Support the Work</strong><br><br>
 
     We have never sent a messenger who did not eat food and walk in the marketplaces.<br><br>
@@ -389,5 +396,110 @@ If you do not use Cash App, you can donate through Gumroad by entering any amoun
     <footer>
       <p>&copy; 2026 Raphael Asanti. All rights reserved.</p>
     </footer>
+
+  <!-- CAROUSEL MODAL -->
+<div id="carouselModal" class="carousel-modal">
+  <div class="carousel-header">
+    <h2 class="carousel-title">Preview — The End of Time</h2>
+    <button class="carousel-close" onclick="closeCarousel()">✕</button>
+  </div>
+
+  <div class="carousel-container">
+    <img src="frontcover.jpeg" alt="Front Cover" class="carousel-slide active">
+    <img src="toc.jpeg" alt="Table of Contents" class="carousel-slide">
+    <img src="intro1.jpeg" alt="Introduction (Page 1)" class="carousel-slide">
+    <img src="intro2.jpeg" alt="Introduction (Page 2)" class="carousel-slide">
+    <img src="backcover.jpeg" alt="Back Cover" class="carousel-slide">
+
+    <button class="carousel-button carousel-prev" onclick="prevSlide()">‹</button>
+    <button class="carousel-button carousel-next" onclick="nextSlide()">›</button>
+  </div>
+
+  <div class="carousel-footer">
+    <button class="carousel-indicator active" onclick="goToSlide(0)"></button>
+    <button class="carousel-indicator" onclick="goToSlide(1)"></button>
+    <button class="carousel-indicator" onclick="goToSlide(2)"></button>
+    <button class="carousel-indicator" onclick="goToSlide(3)"></button>
+    <button class="carousel-indicator" onclick="goToSlide(4)"></button>
+    <span class="carousel-counter"><span id="currentSlide">1</span> / 5</span>
+  </div>
+</div>
+
+<!-- JAVASCRIPT -->
+<script>
+  let currentSlide = 0;
+  const slides = [
+    { name: 'Front Cover' },
+    { name: 'Table of Contents' },
+    { name: 'Introduction (Page 1)' },
+    { name: 'Introduction (Page 2)' },
+    { name: 'Back Cover' }
+  ];
+
+  function openCarousel() {
+    document.getElementById('carouselModal').classList.add('active');
+    document.body.style.overflow = 'hidden'; // Prevent scrolling
+  }
+
+  function closeCarousel() {
+    document.getElementById('carouselModal').classList.remove('active');
+    document.body.style.overflow = 'auto'; // Restore scrolling
+  }
+
+  function showSlide(index) {
+    const modal = document.getElementById('carouselModal');
+    const slideElements = modal.querySelectorAll('.carousel-slide');
+    const indicators = modal.querySelectorAll('.carousel-indicator');
+
+    // Loop around
+    if (index >= slideElements.length) {
+      currentSlide = 0;
+    } else if (index < 0) {
+      currentSlide = slideElements.length - 1;
+    } else {
+      currentSlide = index;
+    }
+
+    // Update slides
+    slideElements.forEach(slide => slide.classList.remove('active'));
+    slideElements[currentSlide].classList.add('active');
+
+    // Update indicators
+    indicators.forEach(indicator => indicator.classList.remove('active'));
+    indicators[currentSlide].classList.add('active');
+
+    // Update counter
+    document.getElementById('currentSlide').textContent = currentSlide + 1;
+  }
+
+  function nextSlide() {
+    showSlide(currentSlide + 1);
+  }
+
+  function prevSlide() {
+    showSlide(currentSlide - 1);
+  }
+
+  function goToSlide(index) {
+    showSlide(index);
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', (e) => {
+    const modal = document.getElementById('carouselModal');
+    if (modal.classList.contains('active')) {
+      if (e.key === 'ArrowRight') nextSlide();
+      if (e.key === 'ArrowLeft') prevSlide();
+      if (e.key === 'Escape') closeCarousel();
+    }
+  });
+
+  // Close modal when clicking outside the image
+  document.getElementById('carouselModal').addEventListener('click', (e) => {
+    if (e.target.id === 'carouselModal') {
+      closeCarousel();
+    }
+  });
+</script>
 </body>
 </html>
