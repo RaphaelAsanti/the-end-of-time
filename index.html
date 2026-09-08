@@ -673,6 +673,13 @@
           </p>
         `;
       }
+      // Load actual chapter HTML
+fetch(`chapters/${chapter.id}.html`)
+  .then(r => r.text())
+  .then(html => {
+    contentArea.innerHTML = html;
+  });
+
 
       // Update navigation buttons
       updateNavigationButtons();
