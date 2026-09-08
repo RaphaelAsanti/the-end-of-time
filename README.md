@@ -3,7 +3,7 @@
 A concise structural overview of the full text of *The End of Time* by Raphael E. Asanti.  
 This repository provides the free edition of the ebook (HTML, EPUB, PDF) and supporting materials.
 
-[View the web edition →](https://raphaelasanti.github.io/the-end-of-time/) · [Repository on GitHub](https://github.com/RaphaelAsanti/the-end-of-time)
+[View the web edition →](https://raphaelasanti.github.io/the-end-of-time/cover.html) · [Repository on GitHub](https://github.com/RaphaelAsanti/the-end-of-time)
 
 ---
 
@@ -19,7 +19,7 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 ---
 
 ## Downloads
-- HTML (primary web edition): https://raphaelasanti.github.io/the-end-of-time/  
+- HTML (primary web edition): https://raphaelasanti.github.io/the-end-of-time/cover.html  
 - EPUB: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub  
   - Size: (3.4 MB)
 - PDF: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf  
