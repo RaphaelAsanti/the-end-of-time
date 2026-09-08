@@ -2,504 +2,764 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-<title>The End of Time – Free eBook by Raphael Asanti</title>
-
-<meta name="description" content="A free eBook by Raphael Asanti exploring symbolic cosmology, structural interpretation, and the end of time. Includes diagrams, commentary, and downloadable formats.">
-
-<!-- Open Graph -->
-<meta property="og:title" content="The End of Time – Free eBook by Raphael Asanti">
-<meta property="og:description" content="A free eBook exploring symbolic cosmology, structural interpretation, and the end of time. Includes diagrams, commentary, and downloadable formats.">
-<meta property="og:type" content="article">
-<meta property="og:url" content="https://raphaelasanti.github.io/the-end-of-time/">
-<meta property="og:image" content="https://raphaelasanti.github.io/the-end-of-time/3dbookcover.jpg">
-
-<!-- Twitter Card -->
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="The End of Time – Free eBook by Raphael Asanti">
-<meta name="twitter:description" content="A free eBook exploring symbolic cosmology, structural interpretation, and the end of time.">
-<meta name="twitter:image" content="https://raphaelasanti.github.io/the-end-of-time/3dbookcover.jpg">
-
-<!-- JSON-LD Structured Data -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "Book",
-  "name": "The End of Time",
-  "author": {
-    "@type": "Person",
-    "name": "Raphael Asanti"
-  },
-  "image": "https://raphaelasanti.github.io/the-end-of-time/3dbookcover.jpg",
-  "description": "A free eBook by Raphael Asanti exploring symbolic cosmology, structural interpretation, and the end of time.",
-  "url": "https://raphaelasanti.github.io/the-end-of-time/"
-}
-</script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The End of Time — Read Online</title>
+  <meta name="description" content="Read The End of Time online with full chapter navigation. Free interactive HTML reader.">
   
-<style>
-  /* MOBILE-FIRST BASE STYLES */
-  body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 16px;
-    line-height: 1.65;
-    color: #222;
-    font-size: 17px; /* larger base font for phones */
-  }
+  <meta property="og:title" content="The End of Time — Read Online (Reader Prototype)">
+  <meta property="og:description" content="Interactive HTML reader prototype for The End of Time. Navigate chapters by section.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://raphaelasanti.github.io/the-end-of-time/index.html">
+  <meta property="og:image" content="https://raphaelasanti.github.io/the-end-of-time/3dbookcover.jpg">
 
-  h1, h2, h3 {
-    text-align: center;
-    margin: 0 0 12px 0;
-    line-height: 1.3;
-  }
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-  .cover {
-    display: block;
-    margin: 20px auto;
-    width: 85%;          /* mobile-first scaling */
-    max-width: 280px;    /* prevents oversized images */
-    border-radius: 6px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-  }
+    :root {
+      --primary-bg: #fafaf8;
+      --secondary-bg: #f5f5f3;
+      --text-color: #2c2c2a;
+      --border-color: #e0e0d8;
+      --sidebar-width: 280px;
+      --accent-primary: #1e40af;
+      --accent-secondary: #7c3aed;
+      --accent-success: #059669;
+    }
 
-  .cta {
-    text-align: center;
-    margin: 24px 0;
-  }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --primary-bg: #1a1a18;
+        --secondary-bg: #242421;
+        --text-color: #e8e8e6;
+        --border-color: #444;
+      }
+    }
 
-  .cta a {
-    background: #333;
-    color: #fff;
-    padding: 14px 22px;  /* larger tap target */
-    border-radius: 8px;
-    text-decoration: none;
-    font-size: 1.15em;
-    display: inline-block;
-  }
-
-  .section {
-    margin: 36px 0;      /* more breathing room on mobile */
-  }
-
-  ul {
-    padding-left: 20px;
-  }
-
-  blockquote {
-    background: #f7f7f7;
-    padding: 16px 20px;
-    border-left: 4px solid #333;
-    margin: 20px 0;
-    font-size: 0.95em;
-  }
-
-  /* DOWNLOAD LINKS */
-  .downloads a {
-    display: block;
-    margin: 10px 0;
-    font-size: 1.1em;
-  }
-
-  /* DESKTOP BREAKPOINT */
-  @media (min-width: 768px) {
     body {
-      max-width: 800px;
-      margin: 0 auto;
-      padding: 24px;
-      font-size: 18px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      background: var(--primary-bg);
+      color: var(--text-color);
+      transition: background 0.3s, color 0.3s;
     }
 
-    .cover {
-      width: 300px;
+    /* Reader Container */
+    .reader-container {
+      display: flex;
+      min-height: 100vh;
     }
 
-    .section {
-      margin: 48px 0;
-    }
-  }
-
-    /* Modal Overlay */
-  .carousel-modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.95);
-    z-index: 1000;
-    overflow: hidden;
-  }
-
-  .carousel-modal.active {
-    display: flex;
-    flex-direction: column;
-  }
-
-  /* Modal Header */
-  .carousel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 20px;
-    background: #111;
-    border-bottom: 1px solid #333;
-  }
-
-  .carousel-title {
-    color: #fff;
-    font-size: 18px;
-    margin: 0;
-  }
-
-  .carousel-close {
-    background: none;
-    border: none;
-    color: #fff;
-    font-size: 28px;
-    cursor: pointer;
-    padding: 0;
-    width: 40px;
-    height: 40px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .carousel-close:hover {
-    color: #aaa;
-  }
-
-  /* Carousel Container */
-  .carousel-container {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
-  }
-
-  .carousel-slide {
-    display: none;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-  }
-
-  .carousel-slide.active {
-    display: block;
-  }
-
-  /* Navigation Buttons */
-  .carousel-button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(255, 255, 255, 0.2);
-    border: none;
-    color: #fff;
-    font-size: 36px;
-    cursor: pointer;
-    padding: 10px 15px;
-    z-index: 10;
-    transition: background 0.3s;
-  }
-
-  .carousel-button:hover {
-    background: rgba(255, 255, 255, 0.4);
-  }
-
-  .carousel-prev {
-    left: 10px;
-  }
-
-  .carousel-next {
-    right: 10px;
-  }
-
-  /* Footer with Indicators */
-  .carousel-footer {
-    padding: 15px 20px;
-    background: #111;
-    border-top: 1px solid #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 10px;
-  }
-
-  .carousel-indicator {
-    width: 12px;
-    height: 12px;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    cursor: pointer;
-    border: none;
-    transition: background 0.3s;
-  }
-
-  .carousel-indicator.active {
-    background: #fff;
-  }
-
-  .carousel-counter {
-    color: #fff;
-    font-size: 14px;
-    margin-left: 15px;
-  }
-
-  /* Trigger Button */
-  .preview-button {
-    background: #666;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1em;
-    margin-top: 15px;
-    transition: background 0.3s;
-  }
-
-  .preview-button:hover {
-    background: #555;
-  }
-
-  /* Mobile Responsiveness */
-  @media (max-width: 768px) {
-    .carousel-button {
-      font-size: 24px;
-      padding: 8px 12px;
+    /* Navigation Sidebar */
+    .nav-sidebar {
+      width: var(--sidebar-width);
+      background: var(--secondary-bg);
+      border-right: 1px solid var(--border-color);
+      padding: 20px;
+      overflow-y: auto;
+      position: sticky;
+      top: 0;
+      height: 100vh;
+      box-shadow: 2px 0 8px rgba(0, 0, 0, 0.05);
+      z-index: 100;
     }
 
-    .carousel-title {
+    .nav-sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 20px;
+    }
+
+    .nav-sidebar-header h3 {
       font-size: 16px;
+      font-weight: 600;
     }
-  }
-</style>
 
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 20px;
+      cursor: pointer;
+      color: var(--text-color);
+    }
+
+    .chapter-tree {
+      list-style: none;
+      margin-bottom: 30px;
+    }
+
+    .part-section {
+      margin-bottom: 24px;
+    }
+
+    .part-title {
+      font-size: 13px;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      color: #999;
+      margin-bottom: 10px;
+      padding-left: 8px;
+    }
+
+    .part-chapters {
+      list-style: none;
+    }
+
+    .part-chapters li {
+      margin-bottom: 6px;
+    }
+
+    .part-chapters a {
+      display: block;
+      padding: 8px 12px;
+      border-radius: 4px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-size: 14px;
+      transition: all 0.2s;
+      border-left: 3px solid transparent;
+      cursor: pointer;
+    }
+
+    .part-chapters a:hover {
+      background: rgba(30, 64, 175, 0.08);
+      border-left-color: var(--accent-primary);
+    }
+
+    .part-chapters a.active {
+      background: rgba(30, 64, 175, 0.12);
+      border-left-color: var(--accent-primary);
+      font-weight: 600;
+    }
+
+    /* Donation Widget */
+    .donation-widget {
+      background: #fff;
+      border: 1px solid var(--border-color);
+      border-radius: 8px;
+      padding: 18px;
+      margin-top: 30px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+    }
+
+    @media (prefers-color-scheme: dark) {
+      .donation-widget {
+        background: #2a2a28;
+      }
+    }
+
+    .donation-widget h4 {
+      font-size: 14px;
+      font-weight: 600;
+      margin-bottom: 10px;
+    }
+
+    .donation-widget p {
+      font-size: 12px;
+      color: #999;
+      margin-bottom: 12px;
+      line-height: 1.4;
+    }
+
+    .donation-buttons {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .btn-donate {
+      padding: 10px 12px;
+      border-radius: 6px;
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 12px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 6px;
+    }
+
+    .btn-donate.cashapp {
+      background: var(--accent-success);
+      color: #fff;
+    }
+
+    .btn-donate.cashapp:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-donate.gumroad {
+      background: var(--accent-secondary);
+      color: #fff;
+    }
+
+    .btn-donate.gumroad:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-download {
+      background: var(--accent-primary);
+      color: #fff;
+      margin-top: 8px;
+    }
+
+    .btn-download:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .back-to-ebook {
+      display: block;
+      padding: 10px 12px;
+      background: #ddd;
+      color: #1a1a18;
+      text-decoration: none;
+      border-radius: 6px;
+      font-size: 12px;
+      text-align: center;
+      margin-bottom: 20px;
+      transition: all 0.2s;
+    }
+
+    .back-to-ebook:hover {
+      background: #ccc;
+    }
+
+    /* Main Content */
+    .reader-content {
+      flex: 1;
+      padding: 40px 60px;
+      max-width: 900px;
+      line-height: 1.8;
+      font-size: 18px;
+      overflow-y: auto;
+    }
+
+    .content-header {
+      margin-bottom: 40px;
+      padding-bottom: 20px;
+      border-bottom: 2px solid var(--border-color);
+    }
+
+    .content-header h1 {
+      font-size: 32px;
+      font-weight: 600;
+      margin-bottom: 8px;
+      line-height: 1.2;
+    }
+
+    .breadcrumb {
+      font-size: 13px;
+      color: #999;
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .breadcrumb span {
+      display: inline;
+    }
+
+    /* Placeholder Content */
+    .chapter-placeholder {
+      background: rgba(30, 64, 175, 0.03);
+      border: 2px dashed var(--border-color);
+      border-radius: 8px;
+      padding: 60px 40px;
+      text-align: center;
+      min-height: 400px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .chapter-placeholder h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      color: var(--text-color);
+    }
+
+    .chapter-placeholder p {
+      color: #999;
+      margin-bottom: 12px;
+      font-size: 14px;
+    }
+
+    .chapter-placeholder code {
+      background: rgba(30, 64, 175, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: monospace;
+      font-size: 13px;
+    }
+
+    /* Chapter Navigation */
+    .chapter-nav {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      margin-top: 60px;
+      padding-top: 30px;
+      border-top: 1px solid var(--border-color);
+    }
+
+    .chapter-nav a {
+      flex: 1;
+      padding: 16px 20px;
+      background: var(--secondary-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 6px;
+      text-decoration: none;
+      color: var(--text-color);
+      font-weight: 500;
+      transition: all 0.2s;
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .chapter-nav a:hover:not(.disabled) {
+      background: rgba(30, 64, 175, 0.08);
+      border-color: var(--accent-primary);
+    }
+
+    .chapter-nav a.disabled {
+      opacity: 0.5;
+      cursor: not-allowed;
+    }
+
+    .chapter-nav .prev-chapter {
+      text-align: left;
+    }
+
+    .chapter-nav .next-chapter {
+      text-align: right;
+    }
+
+    /* Reading Progress */
+    .reading-progress {
+      position: fixed;
+      top: 0;
+      left: 0;
+      height: 3px;
+      background: var(--accent-primary);
+      transition: width 0.3s ease;
+      z-index: 999;
+    }
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      :root {
+        --sidebar-width: 0;
+      }
+
+      .reader-container {
+        flex-direction: column;
+      }
+
+      .nav-sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 75vw;
+        height: 100vh;
+        z-index: 1000;
+        transform: translateX(-100%);
+        transition: transform 0.3s;
+      }
+
+      .nav-sidebar.open {
+        transform: translateX(0);
+      }
+
+      .nav-toggle {
+        display: block;
+      }
+
+      .reader-content {
+        padding: 20px;
+        margin-top: 50px;
+      }
+
+      .content-header {
+        position: sticky;
+        top: 0;
+        background: var(--primary-bg);
+        z-index: 100;
+        padding: 20px 0;
+        margin: -20px -20px 20px -20px;
+        padding: 20px;
+      }
+
+      .content-header h1 {
+        font-size: 24px;
+      }
+
+      .chapter-nav {
+        flex-direction: column;
+      }
+
+      .chapter-placeholder {
+        padding: 40px 20px;
+      }
+
+      .breadcrumb {
+        font-size: 12px;
+      }
+    }
+
+    /* Mobile Top Bar */
+    .mobile-topbar {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 50px;
+      background: var(--secondary-bg);
+      border-bottom: 1px solid var(--border-color);
+      z-index: 101;
+      padding: 10px 15px;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    @media (max-width: 768px) {
+      .mobile-topbar {
+        display: flex;
+      }
+
+      .mobile-topbar button {
+        background: none;
+        border: none;
+        font-size: 20px;
+        cursor: pointer;
+        color: var(--text-color);
+      }
+
+      .mobile-topbar span {
+        font-size: 14px;
+        font-weight: 600;
+        text-align: center;
+        flex: 1;
+      }
+    }
+
+    /* Scrollbar styling */
+    .nav-sidebar::-webkit-scrollbar {
+      width: 6px;
+    }
+
+    .nav-sidebar::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    .nav-sidebar::-webkit-scrollbar-thumb {
+      background: #ccc;
+      border-radius: 3px;
+    }
+
+    .nav-sidebar::-webkit-scrollbar-thumb:hover {
+      background: #999;
+    }
+  </style>
 </head>
-
 <body>
-<div style="text-align:center; margin-bottom:20px;">
-    <a href="https://raphaelasanti.github.io/">← Back to Main Index</a>
-</div>
-  <h1>The End of Time</h1>
-<h2>A Cohesive Theology Integrating the Abrahamic Scriptures, Eschatology, and Quantum Physics</h2>
-<h3>by Raphael Asanti</h3>
+  <div class="reading-progress"></div>
 
-<img src="3dbookcover.jpg" alt="3D Book Cover — The End of Time" class="cover">
-
-<div class="cta">
-  <a href="#downloads">Get the Free eBook</a>
-</div>
-  <!-- TRIGGER BUTTON (place after the 3D book cover image) -->
-<div style="text-align: center; margin: 20px 0;">
-  <button class="preview-button" onclick="openCarousel()">
-    Preview Pages Inside
-  </button>
-</div>
-<div style="
-    float: right;
-    width: 280px;
-    margin: 0 0 20px 20px;
-    padding: 15px;
-    border: 1px solid #ccc;
-    background: #f9f9f9;
-    font-size: 0.9em;
-    line-height: 1.4;
-">
-  
-    <strong>Support the Work</strong><br><br>
-
-    We have never sent a messenger who did not eat food and walk in the marketplaces.<br><br>
-
-    <strong>My only income is voluntary donations.</strong><br><br>
-If you would like to support this work, you may give through Cash App:<br>
-
-    <strong>Cash App:</strong><br>
-    <a href="https://cash.app/$phirunltd">https://cash.app/$phirunltd</a><br><br>
-If you do not use Cash App, you can donate through Gumroad by entering any amount and downloading my ebook:<br>
-    <strong>Gumroad:</strong><br>
-    <a href="https://phirun4.gumroad.com/l/zsmzjh">Donate via Gumroad</a><br><br>
-    The ebook remains free for everyone. You can download it here:<br>
-    <strong>Free Ebook:</strong><br>
-    <a href="https://raphaelasanti.github.io/the-end-of-time/">
-        Download on GitHub
-    </a>
-</div>
-<div class="section">
-  <p>
-    What if the ancient prophetic texts were not symbolic metaphors, but <strong>technical blueprints</strong> for the mechanics of our universe?
-  </p>
-  <p>
-    <em>The End of Time</em> overlays the Old Testament, the New Testament, and the Qur'an with modern quantum physics to reveal a single, unified structure left by the Creator. This is not a sermon or an academic lecture — it is a direct, unfiltered explanation of <strong>who you are</strong>, <strong>what this place is</strong>, and <strong>how reality actually works</strong>.
-  </p>
-</div>
-
-<div class="section">
-  <h3>What This Book Explains</h3>
-  <ul>
-    <li>The subatomic physics of how the universe was created.</li>
-    <li>The overlooked “Day Zero” in Genesis — and what happened on it.</li>
-    <li>How duality emerged and why it defines human experience.</li>
-    <li>Why Earth tilts at 23.5° and aligns with the Draco constellation.</li>
-    <li>Who you are, why you're here, and the meaning of life.</li>
-    <li>Why your body is made of matter instead of solid light — and how that might change.</li>
-    <li>The unified structure connecting the Old Testament, New Testament, and Qur'an.</li>
-  </ul>
-  <p><strong>Don’t believe it’s possible? Read the book — it’s all explained.</strong></p>
-</div>
-
-<div class="section">
-  <h3>Look Inside</h3>
-
-  <blockquote>
-    “The material universe is not a giant, accidental empty room that goes on forever. It is a closed box — a high‑tech, highly monitored incubator built for one purpose: growing human souls.”
-  </blockquote>
-
-  <blockquote>
-    “You are not a body. You are a soul — a living recording device. Your body is just the interface you use to interact with this physical world.”
-  </blockquote>
-</div>
-
-<div class="section">
-  <h3>About the Author</h3>
-  <p>
-    My name is Raphael E. Asanti, and I am a Sovereign Servant of the Sovereign Lord God Almighty — I know about some things.
-  </p>
-  <p>
-    I spent many years living as a homeless beggar on the streets and couldn’t find anyone willing to discuss these ideas, so I wrote them down. I completed this work using nothing but a free library computer, and I’m offering it absolutely free in the hope that it helps someone.
-  </p>
-</div>
-
-<div class="section" id="downloads">
-  <h3>Download the Free eBook</h3>
-  <div class="downloads">
-    <a href="TheEndofTime.pdf">Download PDF</a>
-    <a href="TheEndofTime.epub">Download EPUB</a>
-    <a href="https://phirun4.gumroad.com/l/zsmzjh" target="_blank">Get it on Gumroad — Name Your Price</a>
-  </div>
-  <p>Ultra‑lightweight 5.8 MB PDF.<br>Copyright © 2026 Raphael Asanti - All rights reserved.</strong>.</p>
-</div>
-
-<div class="section">
-  <h3>If This Was Worth Something to You</h3>
-  <p>
-    The book is free. If it gave you something worth having, you can grab it again through Gumroad and leave whatever amount feels right — including $0. It’s the same book, same files, just a place to say thanks if you want to.
-  </p>
-</div>
-
-<div class="section">
-  <p>Repository: <a href="https://github.com/RaphaelAsanti/the-end-of-time">GitHub</a></p>
-</div>
-    <footer>
-      <p>&copy; 2026 Raphael Asanti. All rights reserved.</p>
-    </footer>
-
-  <!-- CAROUSEL MODAL -->
-<div id="carouselModal" class="carousel-modal">
-  <div class="carousel-header">
-    <h2 class="carousel-title">Preview — The End of Time</h2>
-    <button class="carousel-close" onclick="closeCarousel()">✕</button>
+  <!-- Mobile Top Bar -->
+  <div class="mobile-topbar">
+    <button onclick="toggleSidebar()">☰</button>
+    <span id="mobileTitle">The End of Time</span>
+    <div style="width: 40px;"></div>
   </div>
 
-  <div class="carousel-container">
-    <img src="frontcover.jpeg" alt="Front Cover" class="carousel-slide active">
-    <img src="toc.jpeg" alt="Table of Contents" class="carousel-slide">
-    <img src="intro1.jpeg" alt="Introduction (Page 1)" class="carousel-slide">
-    <img src="intro2.jpeg" alt="Introduction (Page 2)" class="carousel-slide">
-    <img src="backcover.jpeg" alt="Back Cover" class="carousel-slide">
+  <div class="reader-container">
+    <!-- Navigation Sidebar -->
+    <aside class="nav-sidebar" id="navSidebar">
+      <div class="nav-sidebar-header">
+        <h3>📖 Contents</h3>
+        <button class="nav-toggle" onclick="toggleSidebar()">✕</button>
+      </div>
 
-    <button class="carousel-button carousel-prev" onclick="prevSlide()">‹</button>
-    <button class="carousel-button carousel-next" onclick="nextSlide()">›</button>
+      <a href="ebook.html" class="back-to-ebook">← Back to Downloads</a>
+
+      <nav class="chapter-tree" id="chapterTree">
+        <!-- Populated by JavaScript -->
+      </nav>
+
+      <!-- Donation Widget -->
+      <div class="donation-widget">
+        <h4>💚 Support This Work</h4>
+        <p>Help sustain the research behind this theology.</p>
+        <div class="donation-buttons">
+          <a href="https://cash.app/$phirunltd" class="btn-donate cashapp" target="_blank">
+            💚 Cash App
+          </a>
+          <a href="https://phirun4.gumroad.com/l/zsmzjh" class="btn-donate gumroad" target="_blank">
+            💗 Gumroad
+          </a>
+          <a href="ebook.html" class="btn-donate btn-download">
+            ⬇ Free Download
+          </a>
+        </div>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="reader-content" id="readerContent">
+      <header class="content-header">
+        <h1 id="chapterTitle">The End of Time</h1>
+        <div class="breadcrumb">
+          <span id="breadcrumb">Reader Prototype</span>
+        </div>
+      </header>
+
+      <!-- Content Area -->
+      <div class="chapter-placeholder">
+        <h2>Chapter Content Placeholder</h2>
+        <p>Select a chapter from the sidebar to display its content here.</p>
+        <p>This is the navigation framework and layout shell.</p>
+        <p><strong>Status:</strong> <code>prototype</code></p>
+        <p style="margin-top: 20px; font-size: 13px; color: #666;">
+          Chapter text will be populated by inserting HTML content or fetching from chapter files.
+        </p>
+      </div>
+
+      <!-- Chapter Navigation -->
+      <nav class="chapter-nav">
+        <a href="#" class="prev-chapter disabled" id="prevBtn" onclick="previousChapter(event)">
+          ← Previous Chapter
+        </a>
+        <a href="#" class="next-chapter" id="nextBtn" onclick="nextChapter(event)">
+          Next Chapter →
+        </a>
+      </nav>
+    </main>
   </div>
 
-  <div class="carousel-footer">
-    <button class="carousel-indicator active" onclick="goToSlide(0)"></button>
-    <button class="carousel-indicator" onclick="goToSlide(1)"></button>
-    <button class="carousel-indicator" onclick="goToSlide(2)"></button>
-    <button class="carousel-indicator" onclick="goToSlide(3)"></button>
-    <button class="carousel-indicator" onclick="goToSlide(4)"></button>
-    <span class="carousel-counter"><span id="currentSlide">1</span> / 5</span>
-  </div>
-</div>
+  <script>
+    // Data structure for chapters
+    let chapterData = null;
+    let currentChapterIndex = 0;
+    let allChapters = [];
 
-<!-- JAVASCRIPT -->
-<script>
-  let currentSlide = 0;
-  const slides = [
-    { name: 'Front Cover' },
-    { name: 'Table of Contents' },
-    { name: 'Introduction (Page 1)' },
-    { name: 'Introduction (Page 2)' },
-    { name: 'Back Cover' }
-  ];
+    // Initialize on page load
+    document.addEventListener('DOMContentLoaded', async () => {
+      await loadChapterData();
+      renderNavigation();
+      setupScrollTracking();
+    });
 
-  function openCarousel() {
-    document.getElementById('carouselModal').classList.add('active');
-    document.body.style.overflow = 'hidden'; // Prevent scrolling
-  }
-
-  function closeCarousel() {
-    document.getElementById('carouselModal').classList.remove('active');
-    document.body.style.overflow = 'auto'; // Restore scrolling
-  }
-
-  function showSlide(index) {
-    const modal = document.getElementById('carouselModal');
-    const slideElements = modal.querySelectorAll('.carousel-slide');
-    const indicators = modal.querySelectorAll('.carousel-indicator');
-
-    // Loop around
-    if (index >= slideElements.length) {
-      currentSlide = 0;
-    } else if (index < 0) {
-      currentSlide = slideElements.length - 1;
-    } else {
-      currentSlide = index;
+    // Load chapter data from JSON
+    async function loadChapterData() {
+      try {
+        const response = await fetch('chapters-data.json');
+        chapterData = await response.json();
+        
+        // Flatten chapters for easier navigation
+        chapterData.parts.forEach(part => {
+          allChapters.push(...part.chapters);
+        });
+      } catch (error) {
+        console.error('Failed to load chapter data:', error);
+        // Fallback data
+        chapterData = {
+          title: "The End of Time",
+          parts: [
+            {
+              id: "part-1",
+              title: "Part I: Foundations",
+              chapters: [
+                { id: "ch-1", number: 1, title: "Genesis & Day Zero", section: "Creation" },
+                { id: "ch-2", number: 2, title: "The Emergence of Duality", section: "Physics" },
+                { id: "ch-3", number: 3, title: "Matter & Soul", section: "Ontology" }
+              ]
+            },
+            {
+              id: "part-2",
+              title: "Part II: Structure & Alignment",
+              chapters: [
+                { id: "ch-4", number: 4, title: "Earth's Cosmic Alignment", section: "Geometry" },
+                { id: "ch-5", number: 5, title: "The Unified Pattern", section: "Integration" }
+              ]
+            }
+          ]
+        };
+        
+        chapterData.parts.forEach(part => {
+          allChapters.push(...part.chapters);
+        });
+      }
     }
 
-    // Update slides
-    slideElements.forEach(slide => slide.classList.remove('active'));
-    slideElements[currentSlide].classList.add('active');
+    // Render chapter navigation tree
+    function renderNavigation() {
+      const tree = document.getElementById('chapterTree');
+      tree.innerHTML = '';
 
-    // Update indicators
-    indicators.forEach(indicator => indicator.classList.remove('active'));
-    indicators[currentSlide].classList.add('active');
+      chapterData.parts.forEach(part => {
+        const partSection = document.createElement('div');
+        partSection.className = 'part-section';
 
-    // Update counter
-    document.getElementById('currentSlide').textContent = currentSlide + 1;
-  }
+        const partTitle = document.createElement('div');
+        partTitle.className = 'part-title';
+        partTitle.textContent = part.title;
+        partSection.appendChild(partTitle);
 
-  function nextSlide() {
-    showSlide(currentSlide + 1);
-  }
+        const ul = document.createElement('ul');
+        ul.className = 'part-chapters';
 
-  function prevSlide() {
-    showSlide(currentSlide - 1);
-  }
+        part.chapters.forEach((chapter, index) => {
+          const li = document.createElement('li');
+          const a = document.createElement('a');
+          a.href = '#';
+          a.textContent = `Ch. ${chapter.number}: ${chapter.title}`;
+          a.dataset.chapterId = chapter.id;
+          a.onclick = (e) => {
+            e.preventDefault();
+            const globalIndex = allChapters.findIndex(ch => ch.id === chapter.id);
+            loadChapter(globalIndex);
+          };
+          li.appendChild(a);
+          ul.appendChild(li);
+        });
 
-  function goToSlide(index) {
-    showSlide(index);
-  }
-
-  // Keyboard navigation
-  document.addEventListener('keydown', (e) => {
-    const modal = document.getElementById('carouselModal');
-    if (modal.classList.contains('active')) {
-      if (e.key === 'ArrowRight') nextSlide();
-      if (e.key === 'ArrowLeft') prevSlide();
-      if (e.key === 'Escape') closeCarousel();
+        partSection.appendChild(ul);
+        tree.appendChild(partSection);
+      });
     }
-  });
 
-  // Close modal when clicking outside the image
-  document.getElementById('carouselModal').addEventListener('click', (e) => {
-    if (e.target.id === 'carouselModal') {
-      closeCarousel();
+    // Load and display a chapter
+    function loadChapter(index) {
+      if (index < 0 || index >= allChapters.length) return;
+
+      currentChapterIndex = index;
+      const chapter = allChapters[index];
+
+      // Update title and breadcrumb
+      document.getElementById('chapterTitle').textContent = `Chapter ${chapter.number}: ${chapter.title}`;
+      document.getElementById('mobileTitle').textContent = `Ch. ${chapter.number}`;
+      
+      const part = chapterData.parts.find(p => p.chapters.some(ch => ch.id === chapter.id));
+      document.getElementById('breadcrumb').innerHTML = `
+        <span>The End of Time</span>
+        <span>›</span>
+        <span>${part.title}</span>
+        <span>›</span>
+        <span>Chapter ${chapter.number}</span>
+      `;
+
+      // Placeholder for chapter content
+      const contentArea = document.querySelector('.chapter-placeholder') || document.getElementById('chapterText');
+      if (contentArea) {
+        contentArea.innerHTML = `
+          <h2>Chapter ${chapter.number}: ${chapter.title}</h2>
+          <p><em>${chapter.section}</em></p>
+          <p style="margin-top: 20px; font-size: 13px; color: #666;">
+            [Chapter content will be populated here]
+          </p>
+        `;
+      }
+
+      // Update navigation buttons
+      updateNavigationButtons();
+
+      // Update active nav item
+      document.querySelectorAll('.part-chapters a').forEach(link => {
+        link.classList.remove('active');
+        if (link.dataset.chapterId === chapter.id) {
+          link.classList.add('active');
+        }
+      });
+
+      // Scroll to top
+      document.getElementById('readerContent').scrollTop = 0;
+
+      // Close sidebar on mobile
+      document.getElementById('navSidebar').classList.remove('open');
     }
-  });
-</script>
+
+    // Update navigation button states
+    function updateNavigationButtons() {
+      const prevBtn = document.getElementById('prevBtn');
+      const nextBtn = document.getElementById('nextBtn');
+
+      if (currentChapterIndex === 0) {
+        prevBtn.classList.add('disabled');
+      } else {
+        prevBtn.classList.remove('disabled');
+        prevBtn.href = '#';
+      }
+
+      if (currentChapterIndex === allChapters.length - 1) {
+        nextBtn.classList.add('disabled');
+      } else {
+        nextBtn.classList.remove('disabled');
+        nextBtn.href = '#';
+      }
+    }
+
+    // Navigation functions
+    function previousChapter(e) {
+      e.preventDefault();
+      if (currentChapterIndex > 0) {
+        loadChapter(currentChapterIndex - 1);
+      }
+    }
+
+    function nextChapter(e) {
+      e.preventDefault();
+      if (currentChapterIndex < allChapters.length - 1) {
+        loadChapter(currentChapterIndex + 1);
+      }
+    }
+
+    // Sidebar toggle on mobile
+    function toggleSidebar() {
+      const sidebar = document.getElementById('navSidebar');
+      sidebar.classList.toggle('open');
+    }
+
+    // Close sidebar when clicking outside
+    document.addEventListener('click', (e) => {
+      const sidebar = document.getElementById('navSidebar');
+      const topbar = document.querySelector('.mobile-topbar');
+      if (sidebar.classList.contains('open') && 
+          !sidebar.contains(e.target) && 
+          !topbar.contains(e.target)) {
+        sidebar.classList.remove('open');
+      }
+    });
+
+    // Reading progress bar
+    function setupScrollTracking() {
+      document.getElementById('readerContent').addEventListener('scroll', (e) => {
+        const content = e.target;
+        const scrolled = content.scrollTop;
+        const total = content.scrollHeight - content.clientHeight;
+        const percent = (scrolled / total) * 100;
+        document.querySelector('.reading-progress').style.width = percent + '%';
+      });
+    }
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'ArrowLeft') previousChapter(e);
+      if (e.key === 'ArrowRight') nextChapter(e);
+    });
+  </script>
 </body>
 </html>
