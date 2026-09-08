@@ -223,38 +223,40 @@ body.large-text .chapter-title {
 </head>
 
 <body>
+<div class="top-bar">
 
-  <!-- Top Navigation -->
-  <div class="top-bar">
+  <div class="nav-left">
+    <label>Chapter:</label>
+    <select onchange="location.href=this.value;">
+      <option value="ch-1.html" selected>Chapter 1 – The Methodology</option>
+      <option value="ch-2.html">Chapter 2 – The Peace Plan</option>
+      <option value="ch-3.html">Chapter 3 – Hebrew Kabbalah in the Qur'an</option>
+    </select>
 
-    <div class="nav-left">
-      <label>Chapter:</label>
-      <select onchange="location.href=this.value;">
-        <option value="ch-1.html" selected>Chapter 1 – The Methodology</option>
-        <option value="ch-2.html">Chapter 2 – The Peace Plan</option>
-        <option value="ch-3.html">Chapter 3 – Hebrew Kabbalah in the Qur'an</option>
-      </select>
-
-      <label>Section:</label>
-      <select onchange="location.href=this.value;">
-        <option value="">(select section)</option>
-        <option value="#intro">Introduction</option>
-        <option value="#epigraph">Epigraph</option>
-        <option value="#kabbalah">Kabbalah</option>
-        <option value="#scriptures">Scriptures</option>
-      </select>
-    </div>
-<button class="nav-button" onclick="toggleTextSize()">A+</button>
-    <div class="nav-right">
-      <a class="donation-link" href="https://cash.app/$phirunltd" target="_blank">CashApp</a>
-      <a class="donation-link" href="https://phirun4.gumroad.com/l/zsmzjh" target="_blank">Gumroad</a>
-
-      <a class="nav-button" href="ch-0.html">Previous</a>
-      <a class="nav-button" href="ch-2.html">Next</a>
-      
-    </div>
-
+    <label>Section:</label>
+    <select onchange="location.href=this.value;">
+      <option value="">(select section)</option>
+      <option value="#intro">Introduction</option>
+      <option value="#epigraph">Epigraph</option>
+      <option value="#kabbalah">Kabbalah</option>
+      <option value="#scriptures">Scriptures</option>
+    </select>
   </div>
+
+  <div class="nav-right">
+    <a class="donation-link" href="https://cash.app/$phirunltd" target="_blank">CashApp</a>
+    <a class="donation-link" href="https://gumroad.com/zsmzjh" target="_blank">Gumroad</a>
+
+    <a class="nav-button" href="ch-0.html">Previous</a>
+    <a class="nav-button" href="ch-2.html">Next</a>
+
+    <!-- NEW BUTTON -->
+    <button class="nav-button" onclick="toggleTextSize()">A+</button>
+  </div>
+
+</div>
+  
+
 
   <!-- Page Content -->
   <div class="page-container">
