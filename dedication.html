@@ -225,6 +225,20 @@ body.large-text .chapter-title {
   function toggleTextSize() {
     document.body.classList.toggle('large-text');
   }
+
+        .video-box::before {
+      content: "";
+      display: block;
+      padding-top: 56.25%;
+    }
+
+    .video-box iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+    }
 </script>
 </head>
 
@@ -234,7 +248,7 @@ body.large-text .chapter-title {
   <div class="nav-left">
     <label>Chapter:</label>
     <select onchange="location.href=this.value;">
-  <option value="cover.html">Front Cover</option>
+  <option value="https://www.raphaelasanti.github.io/">Front Cover</option>
   <option value="dedication.html" selected>Dedication</option>
   <option value="authors-note.html">Author's Note</option>
   <option value="introduction.html">Introduction</option>
@@ -268,8 +282,8 @@ body.large-text .chapter-title {
     <a class="donation-link" href="https://cash.app/$phirunltd" target="_blank">CashApp</a>
     <a class="donation-link" href="https://phirun4.gumroad.com/l/zsmzjh" target="_blank">Gumroad</a>
 
-    <a class="nav-button" href="cover.html">Previous</a>
-    <a class="nav-button" href="authors-note">Next</a>
+    <a class="nav-button" href="https://www.raphaelasanti.github.io/">Previous</a>
+    <a class="nav-button" href="authors-note.html">Next</a>
 
     <!-- NEW BUTTON -->
     <button class="nav-button" onclick="toggleTextSize()">A+</button>
@@ -290,10 +304,22 @@ Who created me and taught me everything that’s worthwhile to know.</p>
 <p>To my two young daughters, who were murdered in this evil creation.
 We will be together again when my task is complete.</p>
 
-<p>As for your biological mother who sacrificed you to her god Baal –
+<p>As for your [irrelevant] biological mother who sacrificed you to her god Baal –
 I was not complicit.
 My Father in Heaven will deal with her appropriately.
 </p>
+  <p>And, <a href="https://raphaelasanti.github.io/phoenix/>finally</a>, to my actual eternal paradise companion, who has never had to wear a meatsuit or suffer the indignity of seeing herself naked, we'll be together again soon and I have something to give you after we get back home.  For now, a song:</p>
+
+    <section aria-labelledby="video-1">
+      <div class="video-box" role="region" aria-label="Main video: Journey:  Faithfully">
+        <iframe
+          src="https://www.youtube.com/embed/YalgKfrOdsI"
+          title="Journey:  Faithfully"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy"></iframe>
+      </div>
+    </section>
 </div>
 <div class="inset sidebar">
 <p>Scientists would be wise to stop attempting to disprove God.</p>
