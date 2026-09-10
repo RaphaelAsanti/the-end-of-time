@@ -244,4 +244,19 @@ body.large-text .chapter-title {
     margin: 20px 0;
   }
 }
+.donation-footer {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid #ddd;
+  font-size: 0.9em;
+  text-align: center;
+  color: #555;
+}
+.donation-footer a {
+  color: #0066cc;
+  text-decoration: none;
+}
+.donation-footer a:hover {
+  text-decoration: underline;
+}
 
