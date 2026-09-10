@@ -8,7 +8,6 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 ---
 
 ## Table of contents
-- [Downloads](#downloads)
 - [How to read / use](#how-to-read--use)
 - [License](#license)
 - [Donate](#donate)
@@ -20,22 +19,11 @@ This repository provides the free edition of the ebook (HTML, EPUB, PDF) and sup
 
 ## Downloads
 - HTML (primary web edition): https://raphaelasanti.github.io/the-end-of-time/  
-- EPUB: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.epub  
-  - Size: (3.4 MB)
-- PDF: https://raphaelasanti.github.io/the-end-of-time/TheEndofTime.pdf  
-  - Size: (5.8 MB)
-
-- [eBook thesis & outline (PDF)](https://github.com/RaphaelAsanti/the-end-of-time/blob/main/ebook-thesis-and-outline.pdf) — 4 pages, concise thesis statement and chapter outline (created July 2026).
-- [Download eBook thesis and outline PDF (raw)](https://raw.githubusercontent.com/RaphaelAsanti/the-end-of-time/main/ebook-thesis-and-outline.pdf)
 
 ---
 
 ## How to read / use
 - Web: open the HTML link in any modern browser.
-- EPUB: open with dedicated readers (Calibre, Apple Books, Readium) or load to e‑readers (Kobo, many Android/Kindle alternatives).
-- PDF: open with any PDF reader.
-
-If you prefer not to donate, you may download directly from the links above.
 
 ---
 
@@ -59,19 +47,11 @@ Thank you for supporting the Author.
 
 ---
 
-## Accessibility & technical notes
-- EPUB generation: ensure the EPUB includes semantic markup and nav.xhtml for best reading experience.
-- PDF: optimize for text-selection and reflow where possible.
-- If you maintain build scripts, include instructions for reproducing EPUB/PDF and add their checksums to this README or Releases.
-
----
-
 ## Author & contact
 Raphael E. Asanti  
 July 2026
 
 Main site / index: https://raphaelasanti.github.io/  
-Related public page: https://raphaelasanti.github.io/peace-in-the-middle-east/
 
 If you need to contact the author for permissions or questions, open an issue or use the contact links on the main site.
 
