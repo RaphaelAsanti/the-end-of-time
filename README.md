@@ -1,7 +1,7 @@
 # The End of Time — Free eBook
 
 A concise structural overview of the full text of *The End of Time* by Raphael E. Asanti.  
-This repository provides the free edition of the ebook (HTML, EPUB, PDF) and supporting materials.
+This repository provides the free edition of the ebook (HTML).
 
 [View the web edition →](https://raphaelasanti.github.io/the-end-of-time/) · [Repository on GitHub](https://github.com/RaphaelAsanti/the-end-of-time)
 
